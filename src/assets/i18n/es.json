@@ -1,0 +1,24 @@
+{
+    "TITLE": "¡Hola mundo!",
+    "PHRASE": "Comentarios sobre el servicio de frases",
+    "NAME_PLACEHOLDER": "Nombre",
+    "NAME_ERROR": "El nombre es requerido",
+    "GENDER_PLACEHOLDER": "Género",
+    "GENDER_ERROR": "El género es requerido",
+    "GENDER_OPTIONS": {
+        "MALE": "Hombre",
+        "FEMALE": "Mujer",
+        "OTHER": "No deseo decir"
+    },
+    "COMMENT_PLACEHOLDER": "Comentario",
+    "COMMENT_ERROR": "EL comentario es requerido",
+    "RATE": "Califica nuestro servicio al cliente",
+    "RATE_ERROR": "La calificación es requerida",
+    "RATE_OPTIONS": {
+        "ECELLENT": "Exelente",
+        "GOOD": "Bueno",
+        "BAD": "Malo"
+    },
+    "BTN_SUBMIT": "Enviar",
+    "ALERT": "¡¡¡Gracias por sus valiosos comentarios!!! Los comentarios se han enviado con éxito."
+}

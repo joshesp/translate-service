@@ -1,0 +1,87 @@
+<div class="feedback-form-container">
+  <mat-card class="feedback-form mat-elevation-z2">
+    <mat-card-title> {{ "PHRASE" | translate }} </mat-card-title>
+    <mat-card-content>
+      <form
+        #feedbackForm="ngForm"
+        (ngSubmit)="feedbackForm.form.valid && saveFeedback()"
+        novalidate
+      >
+        <mat-form-field class="full-width">
+          <input
+            matInput
+            [placeholder]="'NAME_PLACEHOLDER' | translate"
+            name="name"
+            [(ngModel)]="customerFeedback.name"
+            #name="ngModel"
+            required
+          />
+          <mat-error *ngIf="feedbackForm.submitted && name.errors?.required">{{
+            "NAME_ERROR" | translate
+          }}</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-select
+            [placeholder]="'GENDER_PLACEHOLDER' | translate"
+            name="gender"
+            [(ngModel)]="customerFeedback.gender"
+            #gender="ngModel"
+            required
+          >
+            <mat-option value="Male">{{
+              "GENDER_OPTIONS.MALE" | translate
+            }}</mat-option>
+            <mat-option value="Female">{{
+              "GENDER_OPTIONS.FEMALE" | translate
+            }}</mat-option>
+            <mat-option value="Others">{{
+              "GENDER_OPTIONS.OTHER" | translate
+            }}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="feedbackForm.submitted && gender.errors?.required"
+            >{{ "GENDER_ERROR" | translate }}
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <textarea
+            matInput
+            [placeholder]="'COMMENT_PLACEHOLDER' | translate"
+            name="comment"
+            [(ngModel)]="customerFeedback.comment"
+            #comment="ngModel"
+            required
+          ></textarea>
+          <mat-error *ngIf="feedbackForm.submitted && comment.errors?.required"
+            >{{ "COMMENT_ERROR" | translate }}
+          </mat-error>
+        </mat-form-field>
+        <label class="example-margin">{{ "RATE" | translate }}: </label>
+        <mat-radio-group
+          class="example-radio-group"
+          name="rating"
+          [(ngModel)]="customerFeedback.rating"
+          #rating="ngModel"
+          required
+        >
+          <mat-radio-button class="example-radio-button" value="Excellent">
+            {{ "RATE_OPTIONS.ECELLENT" | translate }}
+          </mat-radio-button>
+          <mat-radio-button class="example-radio-button" value="Good">
+            {{ "RATE_OPTIONS.GOOD" | translate }}
+          </mat-radio-button>
+          <mat-radio-button class="example-radio-button" value="Bad">
+            {{ "RATE_OPTIONS.BAD" | translate }}
+          </mat-radio-button>
+        </mat-radio-group>
+        <mat-error *ngIf="feedbackForm.submitted && rating.errors?.required">{{
+          "RATE_ERROR" | translate
+        }}</mat-error>
+        <mat-card-actions align="right">
+          <button type="submit" mat-raised-button color="primary">
+            {{ "BTN_SUBMIT" | translate }}
+          </button>
+        </mat-card-actions>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

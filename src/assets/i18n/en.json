@@ -1,0 +1,24 @@
+{
+    "TITLE": "Hello world!",
+    "PHRASE": "Phrase Service Feedback",
+    "NAME_PLACEHOLDER": "Name",
+    "NAME_ERROR": "Name is required",
+    "GENDER_PLACEHOLDER": "Gender",
+    "GENDER_ERROR": "Gender is required",
+    "GENDER_OPTIONS": {
+        "MALE": "Male",
+        "FEMALE": "Female",
+        "OTHER": "Don't Want to disclose"
+    },
+    "COMMENT_PLACEHOLDER": "Comment",
+    "COMMENT_ERROR": "Comment is required",
+    "RATE": "Rate our customer service",
+    "RATE_ERROR": "Rating is required",
+    "RATE_OPTIONS": {
+        "ECELLENT": "Excellent",
+        "GOOD": "Good",
+        "BAD": "Bad"
+    },
+    "BTN_SUBMIT": "Submit",
+    "ALERT": "Thanks for your valuable feedback!!! The feedback has been submitted succesfully."
+}
